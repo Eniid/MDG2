@@ -1,0 +1,32 @@
+.lightbox{
+    display: flex;
+    position: fixed;
+    top:0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color:rgba(0,0,0,.5);
+    z-index: 1000;
+}
+.lightbox img{
+    max-width: 80vw;
+    max-height: 80vh;
+}
+.lightboxContainer{
+    background-color: #fff;
+    padding: 1em;
+}
+#lightbox{
+    display: none;
+}
+#lightbox:not(:checked) ~ .lightbox{
+    display: none;
+}
+
+.lightbox_button {
+    color: #fff;
+    margin: 2rem;
+}

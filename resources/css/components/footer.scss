@@ -1,0 +1,45 @@
+//*****/ 
+
+footer {
+    color: #fff;
+    background: -webkit-linear-gradient(
+147deg
+, #ffb63f 0%, #ff7196 100%);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    //padding: 5rem;
+    //margin-top: 10rem;
+    font-size: 1.5rem;
+
+    a { 
+        color: #fff;
+    }
+
+    .foot_link {
+
+        font-size: 1.7rem;
+        border-bottom: 1px solid #fff;
+        padding: .7rem 1rem;
+
+    
+
+        a{
+            text-decoration: none;
+        }
+    }
+}
+
+
+@media screen and (max-width: 1000px) {
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .foot_link {
+        width: 15rem;
+        margin: 5rem auto;
+    }
+    
+}

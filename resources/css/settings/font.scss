@@ -1,0 +1,16 @@
+// Import de polices
+// Helvetica Neue
+@font-face { 	font-family: "maine"; 	src: url('/font/montserrat/Montserrat-Regular.ttf');   font-weight: 400; } 
+@font-face { 	font-family: "maine"; 	src: url('/font/montserrat/Montserrat-Light.ttf');   font-weight: 300; } 
+@font-face { 	font-family: "maine"; 	src: url('/font/montserrat/Montserrat-Medium.ttf');   font-weight: 500;} 
+@font-face { 	font-family: "maine"; 	src: url('/font/montserrat/Montserrat-Bold.ttf');   font-weight: 700;} 
+
+
+@font-face { 	font-family: "maine_bold"; 	src: url('/font/ProximaNova-Sbold.otf'); } 
+@font-face { 	font-family: "paris"; 	src: url('/font/Parisienne-Regular.ttf'); } 
+
+// Les polices
+$main_font : maine, Helvetica, Arial, sans-serif; 
+$bold_font : maine_bold, Helvetica, Arial, sans-serif; 
+$paris_font : paris, Helvetica, Arial, sans-serif; 
+

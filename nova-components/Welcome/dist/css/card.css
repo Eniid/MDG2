@@ -1,0 +1,37 @@
+.welcom {
+  padding: 20px 60px;
+}
+
+.welcom li {
+  padding-left: 40px;
+  padding-top: 3px;
+}
+
+.welcom a {
+  color: #3c4c5e;
+}
+
+.welcom li a:hover {
+  color: #ffb047;
+  background: -webkit-linear-gradient(147deg, #ffb047 0%, #fb7293 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.welcom h1 {
+  padding-bottom: 2px;
+}
+
+.welcom .cta {
+  display: inline-block;
+  padding: 15px 30px;
+  margin-left: 78%;
+  margin-top: 40px;
+  background-color: #fff;
+  color: black;
+  border-radius: 5rem;
+  text-decoration: none;
+  -webkit-box-shadow: 5px 5px 35px -13px #00000085;
+          box-shadow: 5px 5px 35px -13px #00000085;
+}
+

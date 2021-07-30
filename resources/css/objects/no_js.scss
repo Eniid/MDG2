@@ -1,0 +1,28 @@
+.no-js-warning {
+
+    position: absolute !important;
+    border: 0 !important;
+    height: 1px !important;
+    width: 1px !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+
+}
+
+
+.no-js .no-js-warning {
+    background-color: #fff;
+    position: fixed;
+    top: 1rem;
+    right: 5rem;
+    left: 5rem;
+    box-shadow: 5px 5px 35px -13px #00000085;
+    padding: 2rem;
+    z-index: 100000000000;
+    
+    p {
+        max-width: 100rem;
+        margin: auto;
+    }
+}

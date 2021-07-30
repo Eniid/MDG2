@@ -1,0 +1,31 @@
+.inl_input {
+    margin-left: 0;
+    margin-top: 3.5rem;
+    width: 93%;
+}
+
+.from_aria_exp {
+    height: 10rem;
+
+     .input_aria {
+        height: 14rem;
+    }
+
+    .aria {
+        height: 7rem;
+    }
+    
+}
+
+
+@media screen and (max-width: 1000px){
+    .main_new {
+        flex-direction: column;
+        margin: 15rem 3rem;
+        height: auto;
+    }
+
+    .cont_infos {
+         padding: 0;
+    }
+}

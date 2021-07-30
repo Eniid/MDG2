@@ -1,0 +1,119 @@
+.exp_main_sec {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10%;
+    margin-right: 4rem;
+    //margin-top: 10rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+
+
+
+.exp_head_contener {
+   // margin-top: 15rem;
+}
+
+
+.exp_head {
+
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin-top: 15rem;
+
+}
+
+@media screen and (max-width: 800px) {
+    .exp_head {
+        flex-direction: column-reverse;
+    }
+
+    .expo_search {
+        margin-bottom: 6rem;
+    }
+}
+
+.exp_body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: right;
+    min-height: 40vh;
+}
+
+
+
+.exp_contener {
+    position: relative;
+    display: flex;
+    align-items: center;
+    max-width: 320px;
+    width: 85%;
+    height: 250px;
+    border-radius: 1rem;
+    box-shadow: #0000002b 4px 4px 20px 4px;
+    margin: 2rem;
+    background-color: #fff;
+}
+
+
+.exp_img {
+    background-size: cover;
+    width: 100%;
+    max-width: 100px;
+    height: 100%;
+    background-position: center;
+}
+
+
+.inner_lable {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+}
+
+
+.exptext {
+    padding: 3rem;
+
+    p {
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+    }
+
+}
+
+.this_edition {
+    margin: 10rem auto;
+    text-align: center;
+
+}
+
+
+.title_exp {
+    display: inline-block;
+}
+
+
+.become_exp {
+    font-size: 1.2rem;
+    margin: 1rem;
+}
+
+
+
+
+
+.search_button {
+    background: none;
+    outline: none;
+    border: none;
+    width: 3rem;
+    height: 4.3rem;
+    position: absolute;
+    right: -.5rem;
+    z-index: 1000000000;
+    cursor: pointer;
+  }
