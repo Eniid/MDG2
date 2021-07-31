@@ -18,8 +18,8 @@ class expoController extends Controller
     //
 
     public function index(Request $request){
-        $editions = Edition::all();
-        $lastEdition = $editions->sortByDesc('edition_date')->first();
+        $lastEdition = Edition::orderByDesc('edition_number')->first();
+
         $contact = Contact::all()->first(); 
         $lables = Lable::all();
         $exposants = Expo::where('this_year', 1)->with('lables')->paginate(6); 

@@ -69,8 +69,18 @@
                 </div>
             </section>
         @endforeach
-        <br>
 
+            @if($exposants->isEmpty())
+
+            <div class="empty">
+                Il n'y à pas encore d'exposant annoncé pour cette edition 
+            </div>
+
+            @else
+
+            Nop
+
+            @endif
         
 
     </div>

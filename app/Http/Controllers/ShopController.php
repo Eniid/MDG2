@@ -20,8 +20,8 @@ class ShopController extends Controller
         Stripe::setApiKey('sk_test_51I4y7oES2VuO6fZpy9wJc0Y2xtK517dgMukrzRWuMOf98eAZbCmmc5VQzdk0tq40ViZh2w4u8y2rCTnITydUYcHs00nVzKUyeg');
         
 
-        $editions = Edition::all();
-        $lastEdition = $editions->sortByDesc('edition_date')->first();
+        $lastEdition = Edition::orderByDesc('edition_number')->first();
+
 
         $contact = Contact::all()->first(); 
         $sponsors = Sponsor::all(); 

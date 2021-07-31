@@ -32,7 +32,7 @@
 
     <!-- Titre de la page  -->
     <a href="/">
-        <h1 itemprop="name">Le {{$lastEdition->edition_number}} marché des <span>&nbsp;Gourmets</span></h1>
+        <h1 itemprop="name">Le {{$lastEdition->edition_number}}@if($lastEdition->edition_number == 1)er @else eme @endif marché des <span>&nbsp;Gourmets</span></h1>
     </a>
 
     <!-- Nav timeline-->
@@ -99,7 +99,9 @@
 
     
     <!-- Footer  -->
-    @if($sponsors)
+
+
+    @if(!$sponsors->isEmpty())
     <section class="partner-box">
         <h2><span class="dub_one">Nos</span><span class="dub_two">Partnenaires</span></h2>
             <div class="sponsor_cont">

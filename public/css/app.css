@@ -1260,6 +1260,15 @@ html {
   cursor: pointer;
 }
 
+.empty {
+  font-size: 3rem;
+  width: 100%;
+  text-align: center;
+  color: grey;
+  font-weight: 100;
+  margin: 20rem 2rem 30rem;
+}
+
 .cont_infos {
   padding: 0 10rem 0 0;
 }

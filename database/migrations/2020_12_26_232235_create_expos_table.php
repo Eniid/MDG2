@@ -19,6 +19,7 @@ class CreateExposTable extends Migration
             $table->string('name');
             $table->longText('desciption');
             $table->string('link');
+            $table->string('img');
 
 
             $table->boolean('this_year');

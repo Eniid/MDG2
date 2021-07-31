@@ -33,11 +33,21 @@
                     <div>
                         <div class="info_title">Date</div>
                     <div>
-                        @if ($lastEdition->bigining_date->monthName == $lastEdition->ending_date->monthName )
+                        @isset($lastEdition->bigining_date)
+                            @if ($lastEdition->bigining_date->monthName == $lastEdition->ending_date->monthName )
                             Du {{ $lastEdition->bigining_date->day }} au {{ $lastEdition->ending_date->day }} {{ $lastEdition->ending_date->monthName }}
-                        @else
-                        Du {{ $lastEdition->bigining_date->day }} {{ $lastEdition->bigining_date->monthName }} au {{ $lastEdition->ending_date->day }} {{ $lastEdition->ending_date->monthName }}
-                        @endif
+                            @else
+                            Du {{ $lastEdition->bigining_date->day }} {{ $lastEdition->bigining_date->monthName }} au {{ $lastEdition->ending_date->day }} {{ $lastEdition->ending_date->monthName }}
+                            @endif
+                        
+                        @endisset
+
+                        @empty($lastEdition->bigining_date)
+                         {{ $lastEdition->aprox_date }}
+                    
+                        @endempty
+
+
                     
                         </div>
                     </div>

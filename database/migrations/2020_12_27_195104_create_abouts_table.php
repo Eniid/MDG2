@@ -18,15 +18,15 @@ class CreateAboutsTable extends Migration
 
             $table->string('mdg_title');
             $table->longText('mdg_desc');
-            $table->string('mdg_img');
+            $table->string('mdg_img')->nullable();
 
             $table->string('why_title');
             $table->longText('why_desc');
-            $table->string('why_img');
+            $table->string('why_img')->nullable();
 
             $table->string('rotari_title');
             $table->longText('rotari_desc');
-            $table->string('rotari_img');
+            $table->string('rotari_img')->nullable();
 
 
             $table->timestamps();

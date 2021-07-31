@@ -13,8 +13,10 @@ class EditionController extends Controller
     //
 
     public function index(){
-        $editions = Edition::all();
-        $lastEdition = $editions->sortByDesc('edition_date')->first();
+
+        $lastEdition = Edition::orderByDesc('edition_number')->first();
+
+        
         $sponsors = Sponsor::all(); 
 
         $contact = Contact::all()->first(); 

@@ -16,8 +16,9 @@ class CreateArchivepicsTable extends Migration
         Schema::create('archivepics', function (Blueprint $table) {
             $table->id();
 
-            $table->foreignId('archive_id')->constrained()->nullable;
+            $table->foreignId('archive_id')->constrained()->nullable();
             $table->string('img');
+            $table->string('alt');
 
             $table->timestamps();
         });

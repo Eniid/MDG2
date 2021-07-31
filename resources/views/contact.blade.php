@@ -113,6 +113,11 @@
                 @enderror
             </div>
 
+            @if ($message = Session::get('success'))
+                <div>
+                    Merci! Votre message à été envoyé avec success! 
+                </div>
+            @endif
         </form>
     </div>
 

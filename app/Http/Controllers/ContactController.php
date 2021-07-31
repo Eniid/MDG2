@@ -29,8 +29,8 @@ class ContactController extends Controller
 
 
     public function store(){
-        $editions = Edition::all();
-        $lastEdition = $editions->sortByDesc('edition_date')->first();
+        $lastEdition = Edition::orderByDesc('edition_number')->first();
+
 
         $contact = Contact::all()->first(); 
 
@@ -48,7 +48,7 @@ class ContactController extends Controller
         $mess->body = request('body');
         $mess->save();
 
-        return redirect('/contact');
+        return redirect('/contact')->with('success',true);
     }
 
 

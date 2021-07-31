@@ -16,8 +16,8 @@ class CreateArchivesTable extends Migration
         Schema::create('archives', function (Blueprint $table) {
             $table->id();
             
-            $table->foreignId('edition_id')->constrained()->nullable;
-            $table->longText('presentation')->nullable;
+            $table->foreignId('edition_id')->constrained()->nullable();
+            $table->longText('presentation')->nullable();
 
             $table->timestamps();
         });

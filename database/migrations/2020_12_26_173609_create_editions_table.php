@@ -15,21 +15,21 @@ class CreateEditionsTable extends Migration
     {
         Schema::create('editions', function (Blueprint $table) {
             $table->id();
-            $table->string('edition_number');
+            $table->integer('edition_number');
             $table->string('edition_date');
 
             $table->string('price')->default('6€');
             $table->string('kids_price')->default('gratuit');
             $table->string('adress')->default('Val Saint Lambert Esplanade du Val, 4100 Seraing');
-            $table->string('place');
-            $table->string('google_map');
-            $table->string('bigining_date')->nullable;
-            $table->string('ending_date')->nullable;
+            $table->string('place')->nullable();
+            $table->string('google_map')->nullable();
+            $table->dateTime('bigining_date')->nullable();
+            $table->dateTime('ending_date')->nullable();
             $table->string('aprox_date');
-            $table->string('Note');
+            $table->string('Note')->nullable();
 
-            $table->string('catch')->nullable;
-            $table->string('presentation')->nullable;
+            $table->text('catch')->nullable();
+            $table->text('presentation')->nullable();
 
 
             $table->timestamps();

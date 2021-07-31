@@ -16,8 +16,8 @@ class editionsController extends Controller
     
 
     public function index(){
-        $editions = Edition::all();
-        $lastEdition = $editions->sortByDesc('edition_date')->first();
+        $lastEdition = Edition::orderByDesc('edition_number')->first();
+
         $larchives = Archive::with('archivepic')->orderBy('edition_id', 'desc')->paginate(10);
         $sponsors = Sponsor::all(); 
 
