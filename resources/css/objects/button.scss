@@ -51,8 +51,8 @@
 }
 
 
-.h_cta:hover, .main_cta:hover {
-    transform: scale(1.05);
+.h_cta:hover, .main_cta:hover, .cta:hover {
+    transform: scale(1.04);
     transition: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 

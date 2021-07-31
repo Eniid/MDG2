@@ -117,9 +117,20 @@
 
         <!-- Informations pratiques  -->
         <div>
-            @if($lastEdition->aprox_date)
-                <p> Date : <span>{{$lastEdition->aprox_date}}</span>
+            Date :
+            @isset($lastEdition->bigining_date)
+            @if ($lastEdition->bigining_date->monthName == $lastEdition->ending_date->monthName )
+            Du {{ $lastEdition->bigining_date->day }} au {{ $lastEdition->ending_date->day }} {{ $lastEdition->ending_date->monthName }}
+            @else
+            Du {{ $lastEdition->bigining_date->day }} {{ $lastEdition->bigining_date->monthName }} au {{ $lastEdition->ending_date->day }} {{ $lastEdition->ending_date->monthName }}
             @endif
+        
+        @endisset
+
+        @empty($lastEdition->bigining_date)
+         {{ $lastEdition->aprox_date }}
+    
+        @endempty
                 <br>
             @if($lastEdition->place)
                 Lieu : <span>@if($lastEdition->google_map)</span><a href="{{$lastEdition->google_map}}" target="_blank" rel="noopener noreferrer">@endif<span itemprop="location">{{$lastEdition->place}}</span>@if($lastEdition->google_map)</a>@endif </p>

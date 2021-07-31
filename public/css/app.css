@@ -194,8 +194,8 @@ a {
   box-shadow: 5px 5px 35px -13px #00000085;
 }
 
-.h_cta:hover, .main_cta:hover {
-  transform: scale(1.05);
+.h_cta:hover, .main_cta:hover, .cta:hover {
+  transform: scale(1.04);
   transition: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
@@ -520,6 +520,14 @@ input[type=text].search_input {
   .payment-form form {
     width: 80vw;
   }
+}
+
+.valid {
+  color: #5a8e53;
+  width: 92%;
+  text-align: right;
+  margin-top: 8rem;
+  font-size: 1.7rem;
 }
 
 .flex.justify-between.flex-1 {

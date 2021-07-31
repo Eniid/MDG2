@@ -94,7 +94,7 @@ class expoController extends Controller
         $re->save();
 
 
-        return redirect('/exposants/demande');
+        return redirect('/exposants/demande')->with('success',true);
 
 
     }

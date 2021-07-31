@@ -18,7 +18,7 @@ class ContactSeeder extends Seeder
         
         Contact::create([
             'tel'    => '0400000000000',
-            'e-mail'      => 'mdg@hotmail.com',
+            'e_mail'      => 'mdg@hotmail.com',
             'web'    => 'http://rotari.com',
         ]);
 

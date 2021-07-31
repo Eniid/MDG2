@@ -103,6 +103,11 @@
             </div>
         </form>
 
+        @if ($message = Session::get('success'))
+        <div class="valid">
+            ✔️ Merci! Votre message à été envoyé avec success! 
+        </div>
+         @endif
     </div>
 
 </section>

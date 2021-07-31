@@ -10,7 +10,7 @@
     <!-- Présentation principale du site -->
     <section class="main_sec presentation">
         <div class="pres_text">
-            <h2>Le {{$lastEdition->edition_number}} marché des <span class="first_letter">Gourmets</span></h2>
+            <h2>Le {{$lastEdition->edition_number}}@if($lastEdition->edition_number == 1)er @else eme @endif marché des <span class="first_letter">Gourmets</span></h2>
 
             <div class="this_edition_pres">
                 {!! $lastEdition->catch !!}
