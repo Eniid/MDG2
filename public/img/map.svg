@@ -1,6 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="23.269" height="27.773" viewBox="0 0 23.269 27.773">
-  <g id="Icon_feather-map-pin" data-name="Icon feather-map-pin" transform="translate(-3)">
-    <path id="Tracé_8" data-name="Tracé 8" d="M24.769,11.635c0,7.882-10.135,14.639-10.135,14.639S4.5,19.517,4.5,11.635a10.135,10.135,0,1,1,20.269,0Z" transform="translate(0 0)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
-    <path id="Tracé_9" data-name="Tracé 9" d="M20.256,13.878A3.378,3.378,0,1,1,16.878,10.5,3.378,3.378,0,0,1,20.256,13.878Z" transform="translate(-2.244 -2.244)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
-  </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="23.269" height="27.773" viewBox="0 0 23.269 27.773"><g id="Icon_feather-map-pin" data-name="Icon feather-map-pin" transform="translate(-3)"><path id="Tracé_8" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M24.769,11.635c0,7.882-10.135,14.639-10.135,14.639S4.5,19.517,4.5,11.635a10.135,10.135,0,1,1,20.269,0Z" data-name="Tracé 8" transform="translate(0 0)"/><path id="Tracé_9" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M20.256,13.878A3.378,3.378,0,1,1,16.878,10.5,3.378,3.378,0,0,1,20.256,13.878Z" data-name="Tracé 9" transform="translate(-2.244 -2.244)"/></g></svg>
