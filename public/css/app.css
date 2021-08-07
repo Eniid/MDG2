@@ -205,6 +205,15 @@ a {
   padding: 1.3rem 3rem;
 }
 
+.become_exp-box {
+  text-align: right;
+}
+
+.become_exp {
+  /* font-size: 1.2rem; */
+  margin: 4rem;
+}
+
 .lable {
   font-size: 1.2rem;
   padding: 0.3rem 0.7rem;
@@ -545,9 +554,15 @@ input[type=text].search_input {
 }
 
 .paginate {
-  margin: auto;
-  text-align: center;
+  display: block;
+  margin: 3rem auto 3rem;
+  width: 100%;
+  text-align: left;
   width: 20rem;
+}
+
+.page {
+  padding: 1rem;
 }
 
 .no-js-warning {
@@ -1193,6 +1208,7 @@ html {
   flex-wrap: wrap;
   justify-content: right;
   min-height: 40vh;
+  margin-top: 2rem;
 }
 
 .exp_contener {
@@ -1240,8 +1256,7 @@ html {
 }
 
 .become_exp {
-  font-size: 1.2rem;
-  margin: 1rem;
+  margin: 4rem;
 }
 
 .search_button {

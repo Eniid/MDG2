@@ -15,7 +15,14 @@
 }
 
 .paginate{
-    margin: auto;
-    text-align: center;
+    display: block;
+    margin: 3rem auto 3rem;
+    width: 100%;
+    text-align: left;
     width: 20rem;
+}
+
+
+.page {
+    padding: 1rem;
 }

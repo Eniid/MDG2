@@ -20,7 +20,7 @@
     <div class="exp_main_sec exp_head_contener">
         <div class="exp_head">
             <div class="title">
-                <h2 class="title_exp"> <span class="first_letter">N</span>os exposants</h2> <a class="become_exp" href="{{ asset('/exposants/demande') }}">Devenir exposant</a>
+                <h2 class="title_exp"> <span class="first_letter">N</span>os exposants</h2> 
                 
                 <!-- Lables -->
                 <div class="labeles">
@@ -78,8 +78,6 @@
 
             @else
 
-            Nop
-
             @endif
         
 
@@ -89,6 +87,11 @@
     <div class="paginate">
         {{ $exposants->links() }}
     </div>
+
+    <div class="become_exp-box">
+        <a class="become_exp cta" href="/exposants/demande">Devenir exposant</a>
+    </div>
+
 </section>
 
 
