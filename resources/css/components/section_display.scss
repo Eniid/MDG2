@@ -124,10 +124,7 @@ html {
         display: flex;
         flex-direction: column;
         align-items: center;
-        background-color: red;
-        background: -webkit-linear-gradient(
-    147deg
-    , #ffb047 0%, #fb7293 100%);
+        border: #fe9a62 solid 2px;
         height: 100%;
         width: 20rem;
         border-radius: 100px;
@@ -136,37 +133,39 @@ html {
         justify-content: center;
 
         img {
+
             max-width: 10rem;
             max-height: 7rem;
             position: absolute;
-            top: -3rem;
+            top: 1.7rem;
         }
     }
 
 
-.one_contener {
-    background: -webkit-linear-gradient(147deg, #FEAD4A,  #FCA254);
-}
+// .one_contener {
+//     background: -webkit-linear-gradient(147deg, #FEAD4A,  #FCA254);
+// }
 
 
-.two_contner {
-    background: -webkit-linear-gradient(147deg, #FE9E5E,  #FD9568);
-}
+// .two_contner {
+//     background: -webkit-linear-gradient(147deg, #FE9E5E,  #FD9568);
+// }
 
-.three_contner {
-    background: -webkit-linear-gradient(147deg, #FD8E71,  #FC847C);
-}
+// .three_contner {
+//     background: -webkit-linear-gradient(147deg, #FD8E71,  #FC847C);
+// }
 
-.four_contner {
-    background: -webkit-linear-gradient(147deg, #FC8180,  #FB788B);
-}
+// .four_contner {
+//     background: -webkit-linear-gradient(147deg, #FC8180,  #FB788B);
+// }
 
     p {
-        padding: 1rem 2rem;
+        padding: 5rem 2rem 1rem 2rem;
         text-align: center;
+        font-weight: 100;
         font-size: 1.6rem;
         line-height: 1.7rem;
-        color: #fff;
+        color: rgb(0, 0, 0);
     }
 }
 

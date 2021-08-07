@@ -21,22 +21,25 @@ strong{
 h1 {
     position: fixed;
     top: 0;
-    margin: 3rem;
+    margin: 3rem 5rem;
     text-align: center;
     z-index: 100000000000000000;
     
     
     span {
         font-family: paris, Helvetica, Arial, sans-serif;
-    display: block;
-    font-size: 7rem;
-    color: #ffb047;
-    background: -webkit-linear-gradient(147deg, #ffb047 0%, #fb7293 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    position: relative;
-    top: -1.4rem;
-    right: 2rem;
+        display: block;
+        font-size: 7rem;
+        color: #ffb047;
+        background: -webkit-linear-gradient(
+    147deg
+    , #ffb047 0%, #fb7293 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        position: relative;
+        top: -0.8rem;
+        right: 3.5rem;
+
     }
 }
 
