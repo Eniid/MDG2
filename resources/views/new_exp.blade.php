@@ -36,13 +36,15 @@
 
     <!-- Formulaire -->
     <div class="cont_form">
-        <form action="/exposants/demande" method="post">
+        <form action="/exposants/demande" method="post" autocomplete="off">
+            <input autocomplete="false" name="hidden" type="text" style="display:none;">
+
             @csrf
 
             <!-- Nom -->
             <div class="input_contener form_input">
                 <label for="name">Nom :</label>
-                <input type="text" id="name" name="name" value="{{ old('name') }}">
+                <input type="text" id="name" name="name" value="{{ old('name') }}" autocomplete="off">
                 <div class="input"></div>
                 @error('name')
                     <div class="input input_all"></div>

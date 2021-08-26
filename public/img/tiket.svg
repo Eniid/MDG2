@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="270" viewBox="0 0 512 270">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" y1="1" x2="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fb5900"/>
+      <stop offset="1" stop-color="#ffdc03"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="0.5" y1="1" x2="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#ffe398"/>
+      <stop offset="1" stop-color="#fdfdd3"/>
+    </linearGradient>
+  </defs>
+  <g id="ticket_1_" data-name="ticket (1)" transform="translate(0 -121)">
+    <g id="Groupe_611" data-name="Groupe 611">
+      <g id="Groupe_610" data-name="Groupe 610">
+        <path id="Tracé_625" data-name="Tracé 625" d="M497,211a14.991,14.991,0,0,0,15-15V136a14.991,14.991,0,0,0-15-15H15A14.991,14.991,0,0,0,0,136v60a14.991,14.991,0,0,0,15,15,45,45,0,0,1,0,90A14.991,14.991,0,0,0,0,316v60a14.991,14.991,0,0,0,15,15H497a14.991,14.991,0,0,0,15-15V316a14.991,14.991,0,0,0-15-15,45,45,0,0,1,0-90Z" fill="url(#linear-gradient)"/>
+      </g>
+    </g>
+    <g id="Groupe_613" data-name="Groupe 613">
+      <g id="Groupe_612" data-name="Groupe 612">
+        <path id="Tracé_626" data-name="Tracé 626" d="M339.643,235.8a14.985,14.985,0,0,0-12.114-10.21l-40.122-5.845-17.959-36.357c-5.039-10.254-21.855-10.254-26.9,0l-17.959,36.357-40.122,5.845a14.995,14.995,0,0,0-8.32,25.576L205.2,279.481l-6.855,39.961a15,15,0,0,0,21.768,15.806L256,316.381l35.889,18.867a15,15,0,0,0,21.768-15.806L306.8,279.481l29.048-28.315a15.006,15.006,0,0,0,3.793-15.366Z" fill="url(#linear-gradient-2)"/>
+      </g>
+    </g>
+  </g>
+</svg>

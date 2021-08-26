@@ -107,8 +107,7 @@
             <div class="sponsor_cont">
                 @foreach($sponsors as $sponsor)
                     @if($sponsor->lien)<a href="{{$sponsor->lien}}" target="_blank" rel="noopener noreferrer" >@endif
-                        <img src="/storage/{{$sponsor->img}}" alt="{{$sponsor->nom}}">
-                    @if($sponsor->lien)</a>@endif
+                        <img src="/storage/{{$sponsor->img}}" alt="{{$sponsor->nom}}">@if($sponsor->lien)</a>@endif
                 @endforeach
             </div>
     </section>
@@ -133,7 +132,7 @@
         @endempty
                 <br>
             @if($lastEdition->place)
-                Lieu : <span>@if($lastEdition->google_map)</span><a href="{{$lastEdition->google_map}}" target="_blank" rel="noopener noreferrer">@endif<span itemprop="location">{{$lastEdition->place}}</span>@if($lastEdition->google_map)</a>@endif </p>
+                <strong>Lieu</strong> : <span>@if($lastEdition->google_map)</span><a href="{{$lastEdition->google_map}}" target="_blank" rel="noopener noreferrer">@endif<span itemprop="location">{{$lastEdition->place}}</span>@if($lastEdition->google_map)</a>@endif </p>
             @endif
         </div>
 
@@ -145,8 +144,8 @@
         <!-- Informations de contacte  -->
         <div>
             <p>
-                Tel : {{$contact->tel}}<br>
-                Mail : <a href="mailto:{{$contact->e_mail}}">{{$contact->e_mail}}</a>
+                <strong>Tel</strong> : {{$contact->tel}}<br>
+                <strong>Mail</strong> : <a href="mailto:{{$contact->e_mail}}" target="_blank" rel="noopener noreferrer">{{$contact->e_mail}}</a>
             </p>
         </div>
 

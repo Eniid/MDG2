@@ -13,6 +13,14 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Http\Request;
 use PhpParser\Node\Stmt\Label;
 
+
+use Illuminate\Support\Arr;
+use Illuminate\Support\Facades\Mail;
+
+use App\Mail\RequestRecived;
+use App\Mail\RequestSent;
+
+
 class expoController extends Controller
 {
     //
@@ -92,6 +100,10 @@ class expoController extends Controller
         $re->body = request('body');
         $re->appouved = 0;
         $re->save();
+
+        Mail::to(request('mail'))->send(new RequestSent());
+        Mail::to('enid-bc@hotmail.com')->send(new RequestRecived());
+
 
 
         return redirect('/exposants/demande')->with('success',true);

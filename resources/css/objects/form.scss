@@ -66,7 +66,7 @@ textarea:focus + div {
     }
 
     input {
-        padding-left: 7.9rem;
+        padding-left: 8.3rem;
         height: 3.5rem;
         border-radius: 1rem;   
          
@@ -76,28 +76,52 @@ textarea:focus + div {
         height: 3.5rem;
         border-radius: 1rem;
         background-color: #fff;
-    z-index: -11;
+        z-index: -11;
     
     }
 
     .mail {
-        padding-left: 8rem;
+        padding-left: 8.6rem;
         margin-left: 1rem; 
     }
 
     .s_name {
-        padding-left: 15rem;
+        padding-left: 16rem;
     }
 
     .prod {
-        padding-left: 10rem;
+        padding-left: 11.2rem;
     }
 
     .web {
-        padding-left: 11rem;
+        padding-left: 11.8rem;
 
     }
 }
+
+
+
+.name {
+  input{
+    padding-left: 2rem;
+  }
+}
+
+.number{
+  margin-top: 4rem;
+  position: relative;
+  input{
+
+  }
+  label{
+
+  }
+  div {
+
+  }
+}
+
+
 
 
 
@@ -193,10 +217,26 @@ input[type=text].search_input {
 }
 
 
+
+
+
+
 .pay {
 
   width: 40rem;
   padding: 10rem 30rem 10rem 10rem;
+
+
+  .form_input label {
+    top: -2.4rem;
+  }
+
+  div{ 
+    margin-bottom: 4rem;
+  }
+
+
+
 
 element.style {
 }
@@ -210,6 +250,27 @@ element.style {
     .inl_input {
         width: 100%;
         margin-bottom: 4rem;
+    }
+
+
+    .number {
+      top: 2.6rem;
+    position: relative;
+
+    div {
+      width: 20rem;
+      margin: 0 10rem auto;
+    }
+
+
+    input {
+      width: 10rem;
+      position: relative;
+      top: -1.6rem;
+      border: none;
+      background: none;
+      outline: none;
+    }
     }
 
 }
@@ -376,4 +437,13 @@ element.style {
   margin-top: 8rem;
   font-size: 1.7rem;
 
+}
+
+
+
+
+
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px white inset !important;
 }

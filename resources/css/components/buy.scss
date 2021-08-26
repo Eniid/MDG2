@@ -20,6 +20,10 @@
 }
 
 
+.main_buy{
+    justify-content: space-around;
+}
+
 
 //** PAGE **
 .buy_infos {
@@ -64,5 +68,51 @@
 
 
 .pay {
-    padding: 10rem;
+    padding: 3rem 10rem;
+    .cta {
+        border: none;
+        width: 16rem;
+    }
+}
+
+.main_buy {
+    flex-wrap: wrap;
+}
+
+
+
+.ticked_img {
+    max-width: 15rem;
+}
+
+
+.buy_page{
+    margin-left: 10%;
+}
+
+
+.pay_inf {
+    text-align: center;
+
+    p {
+        margin: auto;
+    }
+}
+
+.import_note {
+    color: #fb7293;
+}
+
+.order_disp {
+    font-size: 1.2rem;
+    letter-spacing: .2rem;
+    text-transform: uppercase;
+    margin: auto;
+
+    span {
+        font-weight: 500;
+        color: #fb7293;
+
+
+    }
 }

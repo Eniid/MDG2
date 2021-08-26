@@ -28,9 +28,6 @@ window.onload = () => {
 }
 
 
-
-
-
 const annimElt = document.getElementsByClassName("annim"); 
 
 console.log(annimElt);

@@ -23,7 +23,7 @@
                     </div>
                     <div>
                         <div class="info_title">Adress</div>
-                        <div><a href="#" target="_blank" rel="noopener noreferrer">Voir sur Google Map</a></div>
+                        <div><a href="{{ $lastEdition->link }}" target="_blank" rel="noopener noreferrer">Voir sur Google Map</a></div>
                     </div>
                 </div>
                 <div class="flex info_cont">
@@ -58,8 +58,14 @@
                     </div>
                     <div>
                         <div class="info_title">Prix</div>
-                        <div>Adultes : {{$lastEdition->price}}</div>
-                        <div>Enfants : {{$lastEdition->kids_price}}</a></div>
+                        <div>Adultes : {{$lastEdition->price}}€</div>
+                        <div>
+                            @if($lastEdition->kids_price == 0)
+                            Enfants : Gratuit
+                            @else
+                            Enfants : {{$lastEdition->kids_price}}€
+                            @endif
+                        </a></div>
                     </div>
 
 

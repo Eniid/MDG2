@@ -1,0 +1,40 @@
+{
+    "name": "yarbala/nova-optimal-image-field",
+    "description": "Nova Optimal Image field",
+    "authors": [
+        {
+            "name": "Yaraslau Mutallimov",
+            "email": "yarbala@gmail.com",
+            "homepage": "https://yarbala.com/"
+        }
+    ],
+    "homepage": "https://github.com/spatie/image-optimizer",
+    "keywords": [
+        "laravel",
+        "nova",
+        "image optimization",
+        "seo"
+    ],
+    "license": "MIT",
+    "require": {
+        "php": ">=7.1.0",
+        "spatie/laravel-image-optimizer": "^1.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "Yarbala\\OptimalImage\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Yarbala\\OptimalImage\\FieldServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

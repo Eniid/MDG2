@@ -9,6 +9,10 @@ use App\Models\Edition;
 use App\Models\Sponsor;
 use Stripe\Stripe;
 use Illuminate\Support\Arr;
+use Illuminate\Support\Facades\Mail;
+
+use App\Mail\TicketBought;
+
 
 use Illuminate\Http\Request;
 
@@ -17,7 +21,6 @@ class ShopController extends Controller
     
 
     public function buy(){
-        Stripe::setApiKey('sk_test_51I4y7oES2VuO6fZpy9wJc0Y2xtK517dgMukrzRWuMOf98eAZbCmmc5VQzdk0tq40ViZh2w4u8y2rCTnITydUYcHs00nVzKUyeg');
         
 
         $lastEdition = Edition::orderByDesc('edition_number')->first();
@@ -27,13 +30,46 @@ class ShopController extends Controller
         $sponsors = Sponsor::all(); 
 
 
+            //echo json_encode(['id' => $checkout_session->id]);
+
+        //FIN 
+
+        //var_dump($lastEdition);
+
+        return view('buy', compact('lastEdition', 'contact','sponsors'));
+    }
 
 
 
-        $price = $lastEdition ->price *100; 
 
 
 
+
+
+
+
+    public function pay(Request $request){
+        Stripe::setApiKey('sk_test_51I4y7oES2VuO6fZpy9wJc0Y2xtK517dgMukrzRWuMOf98eAZbCmmc5VQzdk0tq40ViZh2w4u8y2rCTnITydUYcHs00nVzKUyeg');
+
+
+        $request->validate(
+            [
+                'card_name' => 'required|min:3',
+                'number' => 'required|integer',
+            ]
+        );
+        $sponsors = Sponsor::all(); 
+
+        $card_name = $request->card_name; 
+        $number = $request->number; 
+
+
+        $lastEdition = Edition::orderByDesc('edition_number')->first();
+
+        $contact = Contact::all()->first(); 
+
+
+        $price = $lastEdition ->price *100 * $number; 
 
         $intent = \Stripe\PaymentIntent::create([
             'amount' => $price,
@@ -43,28 +79,19 @@ class ShopController extends Controller
         ]);
 
         $clientSecret = Arr::get($intent, 'client_secret');
-            //echo json_encode(['id' => $checkout_session->id]);
 
-        //FIN 
+        return view('buy_confirm', compact('lastEdition', 'contact', 'sponsors', 'card_name', 'number', 'clientSecret' ));
 
-        //var_dump($lastEdition);
-
-        return view('buy', compact('lastEdition', 'contact', 'clientSecret', 'sponsors'));
     }
 
 
 
 
-
-
-
-    public function pay(){
+    public function pay_conf(){
         Stripe::setApiKey('sk_test_51I4y7oES2VuO6fZpy9wJc0Y2xtK517dgMukrzRWuMOf98eAZbCmmc5VQzdk0tq40ViZh2w4u8y2rCTnITydUYcHs00nVzKUyeg');
         
+        $lastEdition = Edition::orderByDesc('edition_number')->first();
 
-        
-        $editions = Edition::all();
-        $lastEdition = $editions->sortByDesc('edition_date')->first();
 
         $contact = Contact::all()->first(); 
 
@@ -85,11 +112,16 @@ class ShopController extends Controller
         //FIN 
 
 
-
-
-
         //var_dump($lastEdition);
 
         return view('buy', compact('lastEdition', 'contact', 'clientSecret'));
+    }
+
+    public function send_tikets(){
+
+        Mail::to('enid-bc@hotmail.com')->send(new TicketBought());
+        return response()->json(['success'=>'The Email was successfully sent.']);
+
+
     }
 }
