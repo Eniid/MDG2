@@ -1,10 +1,17 @@
 //*****/ 
 
-footer {
+footer{
     color: #fff;
     background: -webkit-linear-gradient(
 147deg
 , #ffb63f 0%, #ff7196 100%);
+}
+
+
+.footer {
+    max-width: 1500px;
+    margin: auto;
+
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -32,7 +39,7 @@ footer {
 
 
 @media screen and (max-width: 1000px) {
-    footer {
+    .footer {
         flex-direction: column;
         text-align: center;
         padding: 7rem;

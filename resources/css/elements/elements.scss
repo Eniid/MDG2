@@ -2,13 +2,19 @@ html {
     font-family: $main_font;
     font-size: 10px;
     height: 100%;
+
 }
 
 
 body {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
+    letter-spacing: .03rem;
+    overflow: hidden;
 
 }
+
+
+
 
 b{
     font-weight: 900;

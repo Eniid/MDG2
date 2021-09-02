@@ -102,7 +102,7 @@ class expoController extends Controller
         $re->save();
 
         Mail::to(request('mail'))->send(new RequestSent());
-        Mail::to('enid-bc@hotmail.com')->send(new RequestRecived());
+        Mail::to($contact->e_mail)->send(new RequestRecived());
 
 
 

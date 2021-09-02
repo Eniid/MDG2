@@ -65,7 +65,7 @@
                             @else
                             Enfants : {{$lastEdition->kids_price}}€
                             @endif
-                        </a></div>
+                        </div>
                     </div>
 
 
@@ -81,8 +81,8 @@
 
 
         </div>
-        <div class="pres_img">
-            <img src="{{ asset('img/products.png') }}" alt="">
+        <div class="pres_img top-pres-img">
+            <img src="{{ asset('img/products.jpg') }}" alt="">
         </div>
     </section>
 
@@ -123,8 +123,8 @@
                 {!!$lastEdition->presentation!!}
             </div>
 
-            <a href="{{ asset('/about') }}" class="cta">En savoir plus sur nous</a>
-            <a href="{{ asset('/buy') }}" class="h_cta">Achetez vos tickets</a>
+            <a href="/exposants" class="cta">Nos exposants cette année</a>
+            <a href="/buy" class="h_cta">Achetez vos tickets</a>
         </div>
         <div class="pres_img desc_img annim">
             <img src="{{ asset('img/wine.png') }}" alt="">

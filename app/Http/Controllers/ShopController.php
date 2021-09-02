@@ -13,6 +13,8 @@ use Illuminate\Support\Facades\Mail;
 
 use App\Mail\TicketBought;
 
+use Log;
+
 
 use Illuminate\Http\Request;
 
@@ -62,6 +64,7 @@ class ShopController extends Controller
 
         $card_name = $request->card_name; 
         $number = $request->number; 
+        $mail = $request->mail; 
 
 
         $lastEdition = Edition::orderByDesc('edition_number')->first();
@@ -80,7 +83,7 @@ class ShopController extends Controller
 
         $clientSecret = Arr::get($intent, 'client_secret');
 
-        return view('buy_confirm', compact('lastEdition', 'contact', 'sponsors', 'card_name', 'number', 'clientSecret' ));
+        return view('buy_confirm', compact('lastEdition', 'mail', 'contact', 'sponsors', 'card_name', 'number', 'clientSecret' ));
 
     }
 
@@ -91,6 +94,7 @@ class ShopController extends Controller
         Stripe::setApiKey('sk_test_51I4y7oES2VuO6fZpy9wJc0Y2xtK517dgMukrzRWuMOf98eAZbCmmc5VQzdk0tq40ViZh2w4u8y2rCTnITydUYcHs00nVzKUyeg');
         
         $lastEdition = Edition::orderByDesc('edition_number')->first();
+
 
 
         $contact = Contact::all()->first(); 
@@ -111,15 +115,19 @@ class ShopController extends Controller
 
         //FIN 
 
-
+    
         //var_dump($lastEdition);
 
         return view('buy', compact('lastEdition', 'contact', 'clientSecret'));
     }
 
-    public function send_tikets(){
+    public function send_tikets(Request $request){
+        // $input =  $request->all();
+        // Log::info($input);;
+        $lastEdition = Edition::orderByDesc('edition_number')->first();
 
-        Mail::to('enid-bc@hotmail.com')->send(new TicketBought());
+
+        Mail::to($request->mail)->send(new TicketBought($request->card_name, $request->number, $lastEdition));
         return response()->json(['success'=>'The Email was successfully sent.']);
 
 

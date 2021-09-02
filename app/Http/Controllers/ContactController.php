@@ -10,6 +10,12 @@ use App\Models\Message;
 use App\Models\Sponsor;
 use Illuminate\Http\Request;
 
+use Illuminate\Support\Arr;
+use Illuminate\Support\Facades\Mail;
+
+use App\Mail\MessageSent;
+
+
 class ContactController extends Controller
 {
     
@@ -41,12 +47,15 @@ class ContactController extends Controller
                 'mail' => 'required|email',
 
             ]
-        ));
+        )); 
 
         $mess->name = request('name');
         $mess->e_mail = request('mail');
         $mess->body = request('body');
         $mess->save();
+
+        Mail::to($contact->e_mail)->send(new MessageSent());
+
 
         return redirect('/contact')->with('success',true);
     }

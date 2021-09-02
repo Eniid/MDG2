@@ -63,8 +63,6 @@
                         @endif
                     @endforeach
 
-                </span>
             </div>
         </div>
-    </div>
 @endif

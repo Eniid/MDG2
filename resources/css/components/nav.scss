@@ -21,7 +21,7 @@
     right: -40rem;
     top: 0;
     display: flex;
-    z-index: 10000000000000000000000000000;
+    z-index: 10000000000000000000;
 }
 
 
@@ -226,4 +226,9 @@
         transform: translate(-20rem) rotate(90deg);
     }
     
+}
+
+
+.link-like {
+    cursor: pointer;
 }

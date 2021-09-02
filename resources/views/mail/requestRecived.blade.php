@@ -1,5 +1,5 @@
-Bonjour!! 
+<div>
+    Bonjour! 
 
-Vous-avez recu une nouvelle demande de la part d'un expostant. Vous pouvez la trouver sur votre paneau d'administration Nova! 
-
-Bonne journée! 
+    <p>Le Marché des Goutmet à recu une nouvelle demande d'exposant! Vous pouvre le consulter sur votre <a href="http://mdg.celine-everaert.com/nova">Interface d'administration</a></p>
+</div>

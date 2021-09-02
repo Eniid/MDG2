@@ -20,18 +20,16 @@
 
 
 <!-- CONTENU DE LA PAGE -->
-<section class="main_sec main_contact main_buy"> <!-- flex -->
+<section class="main_sec main_contact main_buy buy_conf"> <!-- flex -->
 
 
     <!-- Module de payement -->
 
-
-
     
-    <div>
-
-        <p class="order_disp">Vous allez acheter <span>{{ $number }} tikets</span> au nom de <span>{{ $card_name }}<span></p>
-
+    <div class="buy_enter">
+        <img src="{{ asset('img/tikets.svg') }}" alt="" class="tiket-buy_img">
+        <p class="order_disp">Vous allez acheter <span>{{ $number }} tikets</span> au nom de <span>{{ $card_name }}</span> pour un total de <span>{{ $number *  $lastEdition->price}}€</span></p>
+        <a href="/buy" id="cancel-button_pay">Annuler</a>
          <!-- Module de payement -->
     <div>
         <form id="payment-form" class="pay">
@@ -50,7 +48,7 @@
                 <p id="card-error" role="alert"></p>
                 <div class="result-message hidden">
                     <p>Merci de votre achat!</p>
-                    <p>Vous avez été ajouté à la liste des inviters. Présentez-vous avec un document sur le-quel votre nom est indiqué le jour du marché. <a href="/buy">Retourner a l'acceuil</a> </p>
+                    <p>Vous avez été ajouté à la liste des inviters. Présentez-vous avec un document sur le-quel votre nom est indiqué le jour du marché. <a href="/">Retourner a l'acceuil</a> </p>
                 </div>
             </div>
         </form>
@@ -127,7 +125,7 @@
         
                 </div>
                 <div class="cta_box">
-                    <a href="/buy" class="cta">More abour us </a>
+                    <a href="/about" class="cta">More abour us </a>
         
                 </div>
             </div>
@@ -184,6 +182,7 @@
                     document.querySelector("button").disabled = true;
 
                     document.getElementById('stripe_box').classList.add("hidden");
+                    document.getElementById('cancel-button_pay').classList.add("hidden");
 
                     
 
@@ -199,6 +198,7 @@
                         body: JSON.stringify({
                                 card_name:'{{ $card_name }}',
                                 number:'{{ $number }}',
+                                mail:'{{ $mail }}',
                                 }),
                         })
                         .then(response => response.json())

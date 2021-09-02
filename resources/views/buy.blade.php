@@ -41,20 +41,37 @@
             <form id="payment-form" class="pay" method="post" action="/buy">
                 @csrf
                 <!-- Nom du cliant-->
+
+
+                <div class="input_contener form_input inl_input name-box">
+                    <div class="name">
+                        <label for="card_name">Nom et Prénom :</label> 
+                        <input type="text" id="card_name" placeholder="ex : Léa Jacquot" name="card_name" value="{{ old('name') }}">
+                        <div class="input"></div>
+
+                        @error('card_name')
+                             <div class="input input_all"></div>
+                             <div class="alert alert-danger">{{ $message }}</div>
+                         @enderror
+                     </div>
+                </div>
+
                 <div class="input_contener form_input inl_input">
                    
-                   <div class="name">
-                       <label for="card_name">Nom et Prénom :</label> 
-                       <input type="text" id="card_name" placeholder="ex : Léa Jacquot" name="card_name" value="{{ old('name') }}">
-                       @error('card_name')
-                            <div class="input input_all"></div>
-                            <div class="alert alert-danger">{{ $message }}</div>
-                        @enderror
-                    </div>
+
+
+                    <div class="mail name">
+                        <label for="mail" class="mail_lable">Adress email:</label> 
+                        <input type="text" id="mail" placeholder="ex : abs@hotmail.com" name="mail" value="{{ old('mail') }}">
+                        @error('card_name')
+                             <div class="input input_all"></div>
+                             <div class="alert alert-danger">{{ $message }}</div>
+                         @enderror
+                     </div>
     
                    <div class="number">
-                       <label for="number">Nombre de person</label>
-                       <input type="number" id="number" classe="num_im" name="number" value="{{ old('number') }}">
+                       <label for="number">Nombre de person</label><br>
+                       <input type="number" id="number" class="num_im" name="number" value="{{ old('number') }}">
                        <div class="input"></div>
                        @error('number')
                             <div class="input input_all"></div>
@@ -148,7 +165,7 @@
     
             </div>
             <div class="cta_box">
-                <a href="/buy" class="cta">More abour us </a>
+                <a href="/about" class="cta">More abour us </a>
     
             </div>
         </div>

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="2633.614" height="1517.604" viewBox="0 0 2633.614 1517.604">
+  <defs>
+    <filter id="Icon_awesome-ticket-alt" x="0" y="0" width="2633.614" height="1517.604" filterUnits="userSpaceOnUse">
+      <feOffset dx="3" dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="15" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <linearGradient id="linear-gradient" x1="-0.39" y1="-0.262" x2="1" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#ffb047"/>
+      <stop offset="1" stop-color="#fb7293"/>
+    </linearGradient>
+  </defs>
+  <g id="Groupe_148" data-name="Groupe 148" transform="translate(-1969.856 -8116.904)">
+    <g transform="matrix(1, 0, 0, 1, 1969.86, 8116.9)" filter="url(#Icon_awesome-ticket-alt)">
+      <path id="Icon_awesome-ticket-alt-2" data-name="Icon awesome-ticket-alt" d="M2331.646,718.3c0,98.557,94.9,178.451,211.968,178.451V1432.1H211.968C94.9,1432.1,0,1352.211,0,1253.654v-356.9c117.068,0,211.968-79.894,211.968-178.451S117.068,539.852,0,539.852V4.5H2331.646c117.068,0,211.968,79.894,211.968,178.451v356.9C2426.546,539.852,2331.646,619.745,2331.646,718.3Z" transform="translate(42 37.5)" fill="#fff"/>
+    </g>
+    <rect id="Rectangle_128" data-name="Rectangle 128" width="994" height="986" transform="translate(3246 8380)" fill="url(#linear-gradient)"/>
+    <text id="Le_marché_des_" data-name="Le marché des " transform="translate(3588 8776)" fill="#fff" font-size="70" font-family="ProximaNova-Regular, Proxima Nova"><tspan x="0" y="0">Le marché des </tspan></text>
+    <text id="Gourmets" transform="translate(3390 8967)" fill="#fff" font-size="215" font-family="Parisienne-Regular, Parisienne"><tspan x="0" y="0">Gourmets</tspan></text>
+    <line id="Ligne_16" data-name="Ligne 16" x1="932" transform="translate(2314.5 8380.5)" fill="none" stroke="#707070" stroke-width="1"/>
+    <line id="Ligne_17" data-name="Ligne 17" x1="932" transform="translate(2314.5 9366.5)" fill="none" stroke="#707070" stroke-width="1"/>
+    <line id="Ligne_18" data-name="Ligne 18" y2="986" transform="translate(2314.5 8380.5)" fill="none" stroke="#707070" stroke-width="1"/>
+  </g>
+</svg>

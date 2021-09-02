@@ -44,4 +44,15 @@ Route::post('/buy', [ShopController::class, 'pay']);
 Route::post('/send_tikets', [ShopController::class, 'send_tikets']);
 
 
+Route::get('/createSymLink', function(){
+    Artisan::call('storage:link', []);
+    return 'success';
+});
 
+
+Route::get('foo', function(){
+    $targetFolder = '/home/celinec/www/mdg/storage/app/public';
+    $linkFolder = '/home/celinec/www/mdg/public/storage';
+    symlink($targetFolder, $linkFolder);
+    return 'success';
+});

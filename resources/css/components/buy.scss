@@ -2,8 +2,7 @@
     position: fixed;
     right: 0;
     bottom: 0;
-    z-index: 1000000000000000000000000000000000000;
-
+    z-index: 90000000000000000000;
     img {
         width: 3rem;
         height: auto;
@@ -112,7 +111,43 @@
     span {
         font-weight: 500;
         color: #fb7293;
-
-
     }
+}
+
+
+.mail {
+    .mail_lable {
+        right: 4rem;
+    }
+}
+
+
+.pay .name-box {
+    margin-bottom: 0rem;
+}
+
+
+@media screen and (max-width: 1000px){
+    .main_buy {
+        flex-direction: row;
+        margin: 15rem auto;
+    }
+
+
+    .pay {
+        padding: 3rem 0rem;
+        margin: auto;
+    }
+}
+
+
+.buy_enter {
+    text-align: center;
+}
+
+.tiket-buy_img {
+    max-width: 300px;
+    margin: auto;
+    position: relative;
+    top: -2rem;
 }

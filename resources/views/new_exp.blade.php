@@ -5,7 +5,6 @@
     Devenir exposants :
 @endsection
 
-
 @section('content')
 
 <!--MENU DE NAVIGATION -->
@@ -21,23 +20,21 @@
 
 <!-- CONTENU DE LA PAGE -->
 <section class="main_sec main_contact main_new">
-
     <!-- Texte d'explication -->
     <div class="cont_infos">
         <h2><span class="first_letter">D</span>evenir exposant</h2>
         <p>
-            Comme chaque année, nous donnerons la priorité aux producteurs de produits authentiques et innovants, ce qui fait la réputation de notre Marché. Si vous vous reconnaissez dans cette description, contactez-nous et, dans la mesure de nos places libres, nous vous accueillerons avec plaisir. 
+            Comme chaque année, nous donnerons la priorité aux producteurs de produits authentiques et innovants, ce qui fait la réputation de notre Marché. Si vous vous reconnaissez dans cette description, remplisez le formulraire dans la mesure du possible nous vous accueillerons avec plaisir. 
         </p>
         <p>
-            Vous avez une question avant d’intoduire votre demande ou besoin d’informations supplémentaires ? 
+            Vous avez une question avant d’intoduire votre demande ? <a href="/contact">contactez nous! </a>
         </p>
-        <a href="{{ asset('/contact') }}" class="h_cta">Nous contacter</a>
     </div>
 
     <!-- Formulaire -->
     <div class="cont_form">
         <form action="/exposants/demande" method="post" autocomplete="off">
-            <input autocomplete="false" name="hidden" type="text" style="display:none;">
+            <input name="hidden" type="text" style="display:none;">
 
             @csrf
 

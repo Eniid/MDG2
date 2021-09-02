@@ -11,14 +11,22 @@ class TicketBought extends Mailable
 {
     use Queueable, SerializesModels;
 
+
+    public $card_name; 
+    public $number; 
+    public $lastEdition; 
+
+
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($card_name, $number, $lastEdition)
     {
-        //
+        $this->card_name= $card_name;
+        $this->number= $number;
+        $this->lastEdition= $lastEdition;
     }
 
     /**
