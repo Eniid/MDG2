@@ -5,7 +5,7 @@ Lien vers le site web : http://mdg.celine-everaert.com/
 
 
 
-## Les amélioration :D 
+## Principales améliorations 
 
 - Payement fonctionelle 
 - Le payement se fait en deux étapes pour pouvoir le confirmer 
