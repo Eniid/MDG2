@@ -23,7 +23,7 @@
                     </div>
                     <div>
                         <div class="info_title">Adress</div>
-                        <div><a href="{{ $lastEdition->link }}" target="_blank" rel="noopener noreferrer">Voir sur Google Map</a></div>
+                        <div><a href="{{$lastEdition->link}}" target="_blank" rel="noopener noreferrer">Voir sur Google Map</a></div>
                     </div>
                 </div>
                 <div class="flex info_cont">

@@ -125,9 +125,7 @@ class Edition extends Resource
             return [
                 (new Info())
                     ->info('Ci-dessous vous trouverez la liste des editions du marché des Gourmets. Vous pouvez en ajouter une nouvelle à chaque nouvelle édition, cela mettra automatiquement le site à jour avec les nouvelles informations.'),
-                (new Info())
-                    ->danger('Seul les informations de la derrnére édition crée seront affichées sur le site. Si vous en avez créé une nouvelle sans le vouloir, vous pouvez toujours la suprimer.')
-            
+              
                 ];
 
     }

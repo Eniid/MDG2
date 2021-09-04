@@ -44,6 +44,7 @@ Route::post('/buy', [ShopController::class, 'pay']);
 Route::post('/send_tikets', [ShopController::class, 'send_tikets']);
 
 
+
 Route::get('/createSymLink', function(){
     Artisan::call('storage:link', []);
     return 'success';

@@ -32,7 +32,7 @@
     @endif
 
     <!-- Titre de la page  -->
-    <title>@yield('title') Marché des gourmets</title>
+    <title>Erreur : Marché des gourmets</title>
 </head>
 
 
@@ -40,13 +40,7 @@
 <body itemscope itemtype="https://schema.org/FoodEvent" class="no-js">
 
     <!-- Titre de la page  -->
-    <a href="/">
-        <h1 itemprop="name">Le {{$lastEdition->edition_number}}@if($lastEdition->edition_number == 1)er @else
-eme @endif marché des <span>&nbsp;Gourmets</span></h1>
-    </a>
-
-    <!-- Nav timeline-->
-    <x-timeline></x-timeline>
+    
 
 
 
@@ -110,67 +104,17 @@ eme @endif marché des <span>&nbsp;Gourmets</span></h1>
 <!-- Buy main CTA -->
 <x-buy_cta></x-buy_cta>
 
+<main class="main_404_page">
+    <img src="{{ asset('img/403.svg') }}" alt="">
 
-
-    <!-- *** AJOUT DES PAGES ICI ***   -->
-    @yield('content')
-
+    <div>
+        <p>    Ouuuups! Vous êtes bien sur le site du marché des gourmet, mais cette page n'existe pas! </p>
     
-    <!-- Footer  -->
+    
+        <a href="/" class="cta hcta">Retour sur le site</a>
 
-
-    @if(!$sponsors->isEmpty())
-    <section class="partner-box">
-        <h2><span class="dub_one">Nos</span><span class="dub_two">Partnenaires</span></h2>
-            <div class="sponsor_cont">
-                @foreach($sponsors as $sponsor)
-                    @if($sponsor->lien)<a href="{{$sponsor->lien}}" target="_blank" rel="noopener noreferrer" >@endif
-                        <img src="{{ asset('/storage/'.$sponsor->img) }}" alt="{{$sponsor->nom}}">@if($sponsor->lien)</a>@endif
-                @endforeach
-            </div>
-    </section>
-    @endif
-    <footer> <!-- Flex  -->
-        <div class="footer">
-
-            
-                    <!-- Informations pratiques  -->
-                    <div>
-                        Date :
-                        @isset($lastEdition->bigining_date)
-                        @if ($lastEdition->bigining_date->monthName == $lastEdition->ending_date->monthName )
-                        Du {{ $lastEdition->bigining_date->day }} au {{ $lastEdition->ending_date->day }} {{ $lastEdition->ending_date->monthName }}
-                        @else
-                        Du {{ $lastEdition->bigining_date->day }} {{ $lastEdition->bigining_date->monthName }} au {{ $lastEdition->ending_date->day }} {{ $lastEdition->ending_date->monthName }}
-                        @endif
-                    
-                    @endisset
-            
-                    @empty($lastEdition->bigining_date)
-                     {{ $lastEdition->aprox_date }}
-                
-                    @endempty
-                            <br>
-                        @if($lastEdition->place)
-                            <strong>Lieu</strong> : <span>@if($lastEdition->google_map)</span><a href="{{$lastEdition->google_map}}" target="_blank" rel="noopener noreferrer">@endif<span itemprop="location">{{$lastEdition->place}}</span>@if($lastEdition->google_map)</a>@endif </p>
-                        @endif
-                    </div>
-            
-                    <!-- Site web Rotary  -->
-                    <div class="foot_link">
-                        <a href="{{$contact->web}}" target="_blank" rel="noopener noreferrer">{{$contact->web}}</a>
-                    </div>
-            
-                    <!-- Informations de contacte  -->
-                    <div>
-                        <p>
-                            <strong>Tel</strong> : {{$contact->tel}}<br>
-                            <strong>Mail</strong> : <a href="mailto:{{$contact->e_mail}}" target="_blank" rel="noopener noreferrer">{{$contact->e_mail}}</a>
-                        </p>
-                    </div>
-        </div>
-
-    </footer>
+    </div>
+</main>
     
     <!-- Ajout du JavaScript  -->
     <script src="{{ asset('js/app.js') }}"></script>
