@@ -35,9 +35,9 @@
                     <div>
                         @isset($lastEdition->bigining_date)
                             @if ($lastEdition->bigining_date->monthName == $lastEdition->ending_date->monthName )
-                            Du {{ $lastEdition->bigining_date->day }} au {{ $lastEdition->ending_date->day }} {{ $lastEdition->ending_date->monthName }}
+                            Du <span itemprop="startDate" datetime="{{ $lastEdition->bigining_date->toDateString() }}">{{ $lastEdition->bigining_date->day }}</span> au <span itemprop="endDate" datetime="{{ $lastEdition->ending_date->toDateString() }}">{{ $lastEdition->ending_date->day }} {{ $lastEdition->ending_date->monthName }}</span>
                             @else
-                            Du {{ $lastEdition->bigining_date->day }} {{ $lastEdition->bigining_date->monthName }} au {{ $lastEdition->ending_date->day }} {{ $lastEdition->ending_date->monthName }}
+                            Du <span itemprop="startDate" datetime="{{ $lastEdition->bigining_date->toDateString() }}">{{ $lastEdition->bigining_date->day }} {{ $lastEdition->bigining_date->monthName }}</span>  au <span itemprop="endDate" datetime="{{ $lastEdition->ending_date->toDateString() }}">{{ $lastEdition->ending_date->day }} {{ $lastEdition->ending_date->monthName }}</span>
                             @endif
                         
                         @endisset

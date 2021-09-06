@@ -125,6 +125,7 @@ eme @endif marché des <span>&nbsp;Gourmets</span></h1>
             <div class="sponsor_cont">
                 @foreach($sponsors as $sponsor)
                     @if($sponsor->lien)<a href="{{$sponsor->lien}}" target="_blank" rel="noopener noreferrer" >@endif
+                        <span itemprop="sponsor" class="visually-hidden">{{$sponsor->nom}}</span>
                         <img src="{{ asset('/storage/'.$sponsor->img) }}" alt="{{$sponsor->nom}}">@if($sponsor->lien)</a>@endif
                 @endforeach
             </div>
